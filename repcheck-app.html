@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
@@ -31,201 +30,201 @@ html,body{width:100%;min-height:100%;background:var(--bg);color:var(--white);fon
 
 /* ── NAV ── */
 .nav{
-padding:16px 20px;
-display:flex;align-items:center;justify-content:space-between;
-border-bottom:1px solid var(–border);
-background:rgba(0,0,0,0.6);backdrop-filter:blur(20px);
-position:sticky;top:0;z-index:50;
+  padding:16px 20px;
+  display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid var(--border);
+  background:rgba(0,0,0,0.6);backdrop-filter:blur(20px);
+  position:sticky;top:0;z-index:50;
 }
 .nav-logo{height:28px}
 .nav-right{display:flex;align-items:center;gap:12px}
-.nav-analyses{font-size:12px;color:var(–muted);font-weight:500}
-.nav-analyses span{color:var(–green);font-weight:700}
-.nav-signout{background:none;border:1px solid var(–border);border-radius:8px;padding:6px 12px;color:var(–muted);font-size:12px;cursor:pointer;font-family:‘DM Sans’,sans-serif;transition:all 0.2s}
+.nav-analyses{font-size:12px;color:var(--muted);font-weight:500}
+.nav-analyses span{color:var(--green);font-weight:700}
+.nav-signout{background:none;border:1px solid var(--border);border-radius:8px;padding:6px 12px;color:var(--muted);font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all 0.2s}
 .nav-signout:hover{border-color:rgba(255,255,255,0.15);color:#fff}
 
 /* ── BUTTONS ── */
 .btn-primary{
-width:100%;padding:15px 24px;
-background:var(–green);border:none;border-radius:14px;
-font-size:16px;font-weight:700;color:#000;
-cursor:pointer;font-family:‘DM Sans’,sans-serif;
-box-shadow:0 6px 28px rgba(74,222,128,0.25);
-transition:all 0.2s;letter-spacing:-0.01em;
+  width:100%;padding:15px 24px;
+  background:var(--green);border:none;border-radius:14px;
+  font-size:16px;font-weight:700;color:#000;
+  cursor:pointer;font-family:'DM Sans',sans-serif;
+  box-shadow:0 6px 28px rgba(74,222,128,0.25);
+  transition:all 0.2s;letter-spacing:-0.01em;
 }
 .btn-primary:hover{background:#5ee88d;transform:translateY(-1px)}
 .btn-primary:disabled{opacity:0.5;cursor:not-allowed;transform:none}
 .btn-secondary{
-width:100%;padding:13px 24px;
-background:rgba(255,255,255,0.06);border:1px solid var(–border);border-radius:14px;
-font-size:15px;font-weight:600;color:rgba(255,255,255,0.7);
-cursor:pointer;font-family:‘DM Sans’,sans-serif;transition:all 0.2s;
+  width:100%;padding:13px 24px;
+  background:rgba(255,255,255,0.06);border:1px solid var(--border);border-radius:14px;
+  font-size:15px;font-weight:600;color:rgba(255,255,255,0.7);
+  cursor:pointer;font-family:'DM Sans',sans-serif;transition:all 0.2s;
 }
 .btn-secondary:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.12)}
 
 /* ── INPUTS ── */
 .input-group{margin-bottom:16px}
-.input-label{font-size:12px;color:var(–muted);letter-spacing:0.08em;text-transform:uppercase;font-weight:600;margin-bottom:7px;display:block}
+.input-label{font-size:12px;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;font-weight:600;margin-bottom:7px;display:block}
 .input-field{
-width:100%;padding:13px 16px;
-background:var(–card);border:1px solid var(–border);border-radius:12px;
-font-size:15px;color:#fff;font-family:‘DM Sans’,sans-serif;
-outline:none;transition:border 0.2s;
+  width:100%;padding:13px 16px;
+  background:var(--card);border:1px solid var(--border);border-radius:12px;
+  font-size:15px;color:#fff;font-family:'DM Sans',sans-serif;
+  outline:none;transition:border 0.2s;
 }
 .input-field::placeholder{color:rgba(255,255,255,0.22)}
 .input-field:focus{border-color:rgba(74,222,128,0.4)}
 
 /* ── CARDS ── */
-.card{background:var(–card);border:1px solid var(–border);border-radius:20px;padding:20px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:20px}
 
 /* ── ERROR / SUCCESS ── */
 .alert{padding:12px 16px;border-radius:12px;font-size:13px;font-weight:600;margin-bottom:16px;display:none}
-.alert.error{background:rgba(248,113,113,0.1);border:1px solid rgba(248,113,113,0.25);color:var(–red)}
-.alert.success{background:var(–green-dim);border:1px solid rgba(74,222,128,0.25);color:var(–green)}
+.alert.error{background:rgba(248,113,113,0.1);border:1px solid rgba(248,113,113,0.25);color:var(--red)}
+.alert.success{background:var(--green-dim);border:1px solid rgba(74,222,128,0.25);color:var(--green)}
 .alert.show{display:block}
 
 /* ════════════════════════════════
-SCREEN: AUTH
+   SCREEN: AUTH
 ════════════════════════════════ */
 #screen-auth{align-items:center;justify-content:center;padding:24px;min-height:100vh;position:relative;overflow:hidden}
 .auth-glow{position:absolute;top:20%;left:50%;transform:translateX(-50%);width:400px;height:400px;background:radial-gradient(circle,rgba(74,222,128,0.07) 0%,transparent 65%);pointer-events:none}
 .auth-box{width:100%;max-width:400px;z-index:1}
 .auth-logo{width:140px;margin:0 auto 32px;display:block}
-.auth-title{font-family:‘Barlow Condensed’,sans-serif;font-size:36px;font-weight:900;text-align:center;letter-spacing:-0.02em;margin-bottom:6px}
-.auth-title .g{color:var(–green)}
-.auth-sub{text-align:center;color:var(–muted);font-size:14px;margin-bottom:32px;line-height:1.5}
-.auth-tabs{display:flex;gap:2px;background:var(–card);border-radius:12px;padding:3px;margin-bottom:24px}
-.auth-tab{flex:1;padding:9px;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;font-family:‘DM Sans’,sans-serif;color:var(–muted);background:none;transition:all 0.2s}
-.auth-tab.active{background:var(–card2);color:#fff}
+.auth-title{font-family:'Barlow Condensed',sans-serif;font-size:36px;font-weight:900;text-align:center;letter-spacing:-0.02em;margin-bottom:6px}
+.auth-title .g{color:var(--green)}
+.auth-sub{text-align:center;color:var(--muted);font-size:14px;margin-bottom:32px;line-height:1.5}
+.auth-tabs{display:flex;gap:2px;background:var(--card);border-radius:12px;padding:3px;margin-bottom:24px}
+.auth-tab{flex:1;padding:9px;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;color:var(--muted);background:none;transition:all 0.2s}
+.auth-tab.active{background:var(--card2);color:#fff}
 .auth-divider{display:flex;align-items:center;gap:12px;margin:20px 0}
-.auth-divider::before,.auth-divider::after{content:’’;flex:1;height:1px;background:var(–border)}
-.auth-divider span{font-size:12px;color:var(–muted2)}
-.auth-trial-badge{display:flex;align-items:center;justify-content:center;gap:6px;padding:10px;background:var(–green-dim);border:1px solid rgba(74,222,128,0.2);border-radius:12px;font-size:13px;color:var(–green);font-weight:600;margin-bottom:20px}
+.auth-divider::before,.auth-divider::after{content:'';flex:1;height:1px;background:var(--border)}
+.auth-divider span{font-size:12px;color:var(--muted2)}
+.auth-trial-badge{display:flex;align-items:center;justify-content:center;gap:6px;padding:10px;background:var(--green-dim);border:1px solid rgba(74,222,128,0.2);border-radius:12px;font-size:13px;color:var(--green);font-weight:600;margin-bottom:20px}
 
 /* ════════════════════════════════
-SCREEN: PAYWALL
+   SCREEN: PAYWALL
 ════════════════════════════════ */
 #screen-paywall{align-items:center;justify-content:center;padding:24px;position:relative;overflow:hidden}
 .paywall-glow{position:absolute;top:30%;left:50%;transform:translateX(-50%);width:500px;height:500px;background:radial-gradient(circle,rgba(74,222,128,0.07) 0%,transparent 65%);pointer-events:none}
 .paywall-box{width:100%;max-width:420px;z-index:1}
 .paywall-logo{width:120px;margin:0 auto 24px;display:block}
-.paywall-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;background:var(–green-dim);border:1px solid rgba(74,222,128,0.22);border-radius:999px;font-size:12px;font-weight:700;color:var(–green);margin-bottom:20px}
-.paywall-title{font-family:‘Barlow Condensed’,sans-serif;font-size:clamp(36px,7vw,56px);font-weight:900;letter-spacing:-0.02em;line-height:1;margin-bottom:12px}
-.paywall-title .g{color:var(–green)}
-.paywall-sub{color:var(–muted);font-size:15px;line-height:1.6;margin-bottom:28px}
+.paywall-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;background:var(--green-dim);border:1px solid rgba(74,222,128,0.22);border-radius:999px;font-size:12px;font-weight:700;color:var(--green);margin-bottom:20px}
+.paywall-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(36px,7vw,56px);font-weight:900;letter-spacing:-0.02em;line-height:1;margin-bottom:12px}
+.paywall-title .g{color:var(--green)}
+.paywall-sub{color:var(--muted);font-size:15px;line-height:1.6;margin-bottom:28px}
 .paywall-features{list-style:none;margin-bottom:28px;display:flex;flex-direction:column;gap:10px}
 .paywall-features li{display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.75)}
-.paywall-features li::before{content:‘✓’;color:var(–green);font-weight:700;font-size:13px;flex-shrink:0}
+.paywall-features li::before{content:'✓';color:var(--green);font-weight:700;font-size:13px;flex-shrink:0}
 .paywall-price-row{display:flex;align-items:baseline;gap:6px;margin-bottom:6px}
-.paywall-price{font-family:‘Barlow Condensed’,sans-serif;font-size:52px;font-weight:900;color:#fff;letter-spacing:-0.03em;line-height:1}
-.paywall-price-period{font-size:15px;color:var(–muted);font-weight:400}
-.paywall-price-note{font-size:12px;color:var(–muted2);margin-bottom:20px}
-.paywall-card-wrap{background:var(–card);border:1px solid rgba(74,222,128,0.2);border-radius:20px;padding:24px;margin-bottom:16px;position:relative;overflow:hidden}
-.paywall-card-wrap::before{content:’’;position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(–green),transparent)}
+.paywall-price{font-family:'Barlow Condensed',sans-serif;font-size:52px;font-weight:900;color:#fff;letter-spacing:-0.03em;line-height:1}
+.paywall-price-period{font-size:15px;color:var(--muted);font-weight:400}
+.paywall-price-note{font-size:12px;color:var(--muted2);margin-bottom:20px}
+.paywall-card-wrap{background:var(--card);border:1px solid rgba(74,222,128,0.2);border-radius:20px;padding:24px;margin-bottom:16px;position:relative;overflow:hidden}
+.paywall-card-wrap::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--green),transparent)}
 
 /* Stripe card element */
-#card-element{padding:13px 16px;background:var(–card2);border:1px solid var(–border);border-radius:12px;margin-bottom:16px}
-.stripe-note{font-size:11px;color:var(–muted2);text-align:center;margin-top:8px;display:flex;align-items:center;justify-content:center;gap:5px}
+#card-element{padding:13px 16px;background:var(--card2);border:1px solid var(--border);border-radius:12px;margin-bottom:16px}
+.stripe-note{font-size:11px;color:var(--muted2);text-align:center;margin-top:8px;display:flex;align-items:center;justify-content:center;gap:5px}
 
 /* ════════════════════════════════
-SCREEN: DASHBOARD (main app)
+   SCREEN: DASHBOARD (main app)
 ════════════════════════════════ */
 #screen-app{padding-bottom:40px}
 .app-hero{
-padding:28px 20px 24px;
-background:linear-gradient(180deg,rgba(74,222,128,0.04) 0%,transparent 100%);
-border-bottom:1px solid var(–border);
+  padding:28px 20px 24px;
+  background:linear-gradient(180deg,rgba(74,222,128,0.04) 0%,transparent 100%);
+  border-bottom:1px solid var(--border);
 }
 .app-hero-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
-.app-greeting{font-size:13px;color:var(–muted);font-weight:500}
-.app-name{font-family:‘Barlow Condensed’,sans-serif;font-size:28px;font-weight:900;letter-spacing:-0.02em;color:#fff;margin-top:2px}
+.app-greeting{font-size:13px;color:var(--muted);font-weight:500}
+.app-name{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;letter-spacing:-0.02em;color:#fff;margin-top:2px}
 .usage-card{
-display:flex;align-items:center;justify-content:space-between;
-background:var(–card);border:1px solid var(–border);border-radius:16px;padding:14px 16px;
+  display:flex;align-items:center;justify-content:space-between;
+  background:var(--card);border:1px solid var(--border);border-radius:16px;padding:14px 16px;
 }
 .usage-left{}
-.usage-label{font-size:11px;color:var(–muted);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px}
-.usage-count{font-family:‘Barlow Condensed’,sans-serif;font-size:28px;font-weight:900;color:var(–green);letter-spacing:-0.02em;line-height:1}
-.usage-count span{font-size:14px;color:var(–muted);font-weight:400;font-family:‘DM Sans’,sans-serif}
+.usage-label{font-size:11px;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px}
+.usage-count{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;color:var(--green);letter-spacing:-0.02em;line-height:1}
+.usage-count span{font-size:14px;color:var(--muted);font-weight:400;font-family:'DM Sans',sans-serif}
 .usage-bar-wrap{flex:1;margin:0 16px}
 .usage-bar-track{height:6px;background:rgba(255,255,255,0.07);border-radius:99px;overflow:hidden}
 .usage-bar-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,#4ADE80,#22d3ee);transition:width 0.8s ease}
 
 .app-content{padding:20px}
-.section-label{font-size:11px;color:var(–green);letter-spacing:0.15em;text-transform:uppercase;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px}
-.section-label::before{content:’’;display:block;width:16px;height:1px;background:var(–green)}
+.section-label{font-size:11px;color:var(--green);letter-spacing:0.15em;text-transform:uppercase;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.section-label::before{content:'';display:block;width:16px;height:1px;background:var(--green)}
 
 /* Upload zone */
 .upload-zone{
-border:2px dashed rgba(255,255,255,0.1);border-radius:20px;
-padding:36px 20px;text-align:center;cursor:pointer;
-background:rgba(255,255,255,0.02);
-transition:all 0.2s;position:relative;overflow:hidden;
-margin-bottom:16px;
+  border:2px dashed rgba(255,255,255,0.1);border-radius:20px;
+  padding:36px 20px;text-align:center;cursor:pointer;
+  background:rgba(255,255,255,0.02);
+  transition:all 0.2s;position:relative;overflow:hidden;
+  margin-bottom:16px;
 }
-.upload-zone:hover,.upload-zone.drag{border-color:rgba(74,222,128,0.4);background:var(–green-dim)}
+.upload-zone:hover,.upload-zone.drag{border-color:rgba(74,222,128,0.4);background:var(--green-dim)}
 .upload-zone input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
 .upload-icon{font-size:40px;margin-bottom:12px}
 .upload-title{font-size:16px;font-weight:700;color:#fff;margin-bottom:6px}
-.upload-sub{font-size:13px;color:var(–muted);line-height:1.5}
-.upload-badge{display:inline-block;margin-top:12px;padding:4px 12px;border-radius:99px;font-size:11px;font-weight:600;background:rgba(255,255,255,0.06);border:1px solid var(–border);color:var(–muted)}
+.upload-sub{font-size:13px;color:var(--muted);line-height:1.5}
+.upload-badge{display:inline-block;margin-top:12px;padding:4px 12px;border-radius:99px;font-size:11px;font-weight:600;background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--muted)}
 
 /* Exercise selector */
 .exercise-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
 .exercise-btn{
-padding:16px 12px;border-radius:16px;border:1px solid var(–border);
-background:var(–card);cursor:pointer;text-align:center;
-transition:all 0.2s;font-family:‘DM Sans’,sans-serif;
+  padding:16px 12px;border-radius:16px;border:1px solid var(--border);
+  background:var(--card);cursor:pointer;text-align:center;
+  transition:all 0.2s;font-family:'DM Sans',sans-serif;
 }
-.exercise-btn:hover{border-color:rgba(74,222,128,0.3);background:var(–green-dim)}
-.exercise-btn.selected{border-color:var(–green);background:rgba(74,222,128,0.1);box-shadow:0 0 20px rgba(74,222,128,0.1)}
+.exercise-btn:hover{border-color:rgba(74,222,128,0.3);background:var(--green-dim)}
+.exercise-btn.selected{border-color:var(--green);background:rgba(74,222,128,0.1);box-shadow:0 0 20px rgba(74,222,128,0.1)}
 .exercise-icon{font-size:28px;margin-bottom:8px}
 .exercise-name{font-size:14px;font-weight:700;color:#fff}
 
 /* File preview */
-.file-preview{background:var(–card);border:1px solid var(–border);border-radius:16px;padding:14px 16px;display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.file-preview{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:14px 16px;display:flex;align-items:center;gap:12px;margin-bottom:16px}
 .file-icon{font-size:24px;flex-shrink:0}
 .file-info{flex:1;min-width:0}
 .file-name{font-size:14px;font-weight:600;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.file-size{font-size:12px;color:var(–muted);margin-top:2px}
-.file-remove{background:none;border:none;color:var(–muted);cursor:pointer;font-size:18px;padding:4px;flex-shrink:0}
+.file-size{font-size:12px;color:var(--muted);margin-top:2px}
+.file-remove{background:none;border:none;color:var(--muted);cursor:pointer;font-size:18px;padding:4px;flex-shrink:0}
 
 /* Analysing state */
 .analysing-wrap{text-align:center;padding:40px 20px}
 .analysing-icon{font-size:52px;margin-bottom:20px;animation:pulse 1.4s ease-in-out infinite}
 @keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.08);opacity:0.7}}
-.analysing-title{font-family:‘Barlow Condensed’,sans-serif;font-size:32px;font-weight:900;color:#fff;margin-bottom:8px}
-.analysing-sub{color:var(–muted);font-size:14px;line-height:1.6;max-width:280px;margin:0 auto 28px}
+.analysing-title{font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:900;color:#fff;margin-bottom:8px}
+.analysing-sub{color:var(--muted);font-size:14px;line-height:1.6;max-width:280px;margin:0 auto 28px}
 .progress-track{height:4px;background:rgba(255,255,255,0.07);border-radius:99px;overflow:hidden;max-width:280px;margin:0 auto}
 .progress-fill{height:100%;background:linear-gradient(90deg,#4ADE80,#22d3ee);border-radius:99px;width:0%;transition:width 0.4s ease}
 .analysing-steps{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:24px}
-.a-step{padding:5px 12px;border-radius:99px;font-size:11px;font-weight:600;background:rgba(255,255,255,0.04);border:1px solid var(–border);color:var(–muted2);transition:all 0.4s}
-.a-step.done{background:rgba(74,222,128,0.1);border-color:rgba(74,222,128,0.25);color:var(–green)}
+.a-step{padding:5px 12px;border-radius:99px;font-size:11px;font-weight:600;background:rgba(255,255,255,0.04);border:1px solid var(--border);color:var(--muted2);transition:all 0.4s}
+.a-step.done{background:rgba(74,222,128,0.1);border-color:rgba(74,222,128,0.25);color:var(--green)}
 
 /* Results */
 .results-wrap{animation:fadeUp 0.5s ease both}
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 
-.score-hero{background:var(–card);border:1px solid var(–border);border-radius:20px;padding:24px;text-align:center;margin-bottom:14px;position:relative;overflow:hidden}
-.score-hero::before{content:’’;position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(–green),transparent)}
-.score-exercise{font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(–muted);margin-bottom:16px;font-weight:600}
+.score-hero{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:24px;text-align:center;margin-bottom:14px;position:relative;overflow:hidden}
+.score-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--green),transparent)}
+.score-exercise{font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;font-weight:600}
 .score-ring-wrap{position:relative;width:140px;height:140px;margin:0 auto 16px}
 .score-ring-wrap svg{position:absolute;transform:rotate(-90deg)}
 .score-number{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.score-num{font-family:‘Barlow Condensed’,sans-serif;font-size:52px;font-weight:900;line-height:1;letter-spacing:-0.03em}
-.score-denom{font-size:12px;color:var(–muted);margin-top:2px}
+.score-num{font-family:'Barlow Condensed',sans-serif;font-size:52px;font-weight:900;line-height:1;letter-spacing:-0.03em}
+.score-denom{font-size:12px;color:var(--muted);margin-top:2px}
 .score-label{font-size:15px;font-weight:700;color:#fff;margin-bottom:6px}
 .score-grade{display:inline-block;padding:4px 14px;border-radius:99px;font-size:12px;font-weight:700}
-.grade-excellent{background:rgba(74,222,128,0.15);color:var(–green);border:1px solid rgba(74,222,128,0.25)}
-.grade-good{background:rgba(74,222,128,0.1);color:var(–green);border:1px solid rgba(74,222,128,0.2)}
-.grade-fair{background:rgba(252,211,77,0.12);color:var(–amber);border:1px solid rgba(252,211,77,0.25)}
-.grade-poor{background:rgba(248,113,113,0.1);color:var(–red);border:1px solid rgba(248,113,113,0.2)}
+.grade-excellent{background:rgba(74,222,128,0.15);color:var(--green);border:1px solid rgba(74,222,128,0.25)}
+.grade-good{background:rgba(74,222,128,0.1);color:var(--green);border:1px solid rgba(74,222,128,0.2)}
+.grade-fair{background:rgba(252,211,77,0.12);color:var(--amber);border:1px solid rgba(252,211,77,0.25)}
+.grade-poor{background:rgba(248,113,113,0.1);color:var(--red);border:1px solid rgba(248,113,113,0.2)}
 
 .top-cue{background:rgba(74,222,128,0.07);border:1px solid rgba(74,222,128,0.18);border-radius:16px;padding:16px;margin-bottom:14px}
-.top-cue-label{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(–green);font-weight:700;margin-bottom:7px}
+.top-cue-label{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--green);font-weight:700;margin-bottom:7px}
 .top-cue-text{font-size:15px;color:#fff;line-height:1.55;font-style:italic;font-weight:500}
 
-.bars-card{background:var(–card);border:1px solid var(–border);border-radius:20px;padding:18px;margin-bottom:14px}
+.bars-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:18px;margin-bottom:14px}
 .bar-row{margin-bottom:12px}
 .bar-row:last-child{margin-bottom:0}
 .bar-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
@@ -234,45 +233,45 @@ transition:all 0.2s;font-family:‘DM Sans’,sans-serif;
 .bar-track{height:6px;background:rgba(255,255,255,0.07);border-radius:99px;overflow:hidden}
 .bar-fill{height:100%;border-radius:99px;width:0%;transition:width 1s cubic-bezier(0.4,0,0.2,1)}
 
-.feedback-card{background:var(–card);border:1px solid var(–border);border-radius:20px;padding:18px;margin-bottom:14px}
+.feedback-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:18px;margin-bottom:14px}
 .feedback-item{display:flex;gap:12px;margin-bottom:14px}
 .feedback-item:last-child{margin-bottom:0}
 .feedback-emoji{font-size:18px;flex-shrink:0;margin-top:1px}
 .feedback-text{font-size:13px;color:rgba(255,255,255,0.72);line-height:1.6}
 
 .next-focus{background:rgba(74,222,128,0.05);border:1px solid rgba(74,222,128,0.15);border-radius:16px;padding:16px;margin-bottom:20px}
-.next-focus-label{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(–green);font-weight:700;margin-bottom:7px}
+.next-focus-label{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--green);font-weight:700;margin-bottom:7px}
 .next-focus-text{font-size:14px;color:#fff;line-height:1.55;font-weight:600}
 
 .risk-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:999px;font-size:12px;font-weight:700;margin-bottom:14px}
-.risk-low{background:rgba(74,222,128,0.1);color:var(–green);border:1px solid rgba(74,222,128,0.2)}
-.risk-medium{background:rgba(252,211,77,0.1);color:var(–amber);border:1px solid rgba(252,211,77,0.2)}
-.risk-high{background:rgba(248,113,113,0.1);color:var(–red);border:1px solid rgba(248,113,113,0.2)}
+.risk-low{background:rgba(74,222,128,0.1);color:var(--green);border:1px solid rgba(74,222,128,0.2)}
+.risk-medium{background:rgba(252,211,77,0.1);color:var(--amber);border:1px solid rgba(252,211,77,0.2)}
+.risk-high{background:rgba(248,113,113,0.1);color:var(--red);border:1px solid rgba(248,113,113,0.2)}
 
 /* History */
-.history-item{background:var(–card);border:1px solid var(–border);border-radius:16px;padding:14px 16px;margin-bottom:10px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:border-color 0.2s}
+.history-item{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:14px 16px;margin-bottom:10px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:border-color 0.2s}
 .history-item:hover{border-color:rgba(74,222,128,0.25)}
 .history-left{}
 .history-exercise{font-size:15px;font-weight:700;color:#fff;margin-bottom:3px}
-.history-date{font-size:12px;color:var(–muted)}
-.history-score{font-family:‘Barlow Condensed’,sans-serif;font-size:28px;font-weight:900;letter-spacing:-0.02em}
+.history-date{font-size:12px;color:var(--muted)}
+.history-score{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;letter-spacing:-0.02em}
 
-.empty-state{text-align:center;padding:40px 20px;color:var(–muted)}
+.empty-state{text-align:center;padding:40px 20px;color:var(--muted)}
 .empty-icon{font-size:40px;margin-bottom:12px}
 .empty-title{font-size:16px;font-weight:700;color:rgba(255,255,255,0.5);margin-bottom:6px}
 .empty-sub{font-size:13px;line-height:1.6}
 
 /* Bottom tab bar */
 .tab-bar{
-position:fixed;bottom:0;left:0;right:0;
-display:flex;background:rgba(10,10,10,0.95);
-backdrop-filter:blur(20px);
-border-top:1px solid var(–border);
-padding:8px 0 max(8px,env(safe-area-inset-bottom));
-z-index:50;
+  position:fixed;bottom:0;left:0;right:0;
+  display:flex;background:rgba(10,10,10,0.95);
+  backdrop-filter:blur(20px);
+  border-top:1px solid var(--border);
+  padding:8px 0 max(8px,env(safe-area-inset-bottom));
+  z-index:50;
 }
-.tab-btn{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px;border:none;background:none;cursor:pointer;font-family:‘DM Sans’,sans-serif;color:var(–muted);transition:color 0.2s}
-.tab-btn.active{color:var(–green)}
+.tab-btn{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px;border:none;background:none;cursor:pointer;font-family:'DM Sans',sans-serif;color:var(--muted);transition:color 0.2s}
+.tab-btn.active{color:var(--green)}
 .tab-icon{font-size:20px}
 .tab-label{font-size:10px;font-weight:600;letter-spacing:0.05em}
 
@@ -284,12 +283,10 @@ z-index:50;
 .spinner{width:20px;height:20px;border:2px solid rgba(0,0,0,0.3);border-top-color:#000;border-radius:50%;animation:spin 0.8s linear infinite;display:inline-block;margin-right:8px;vertical-align:middle}
 @keyframes spin{to{transform:rotate(360deg)}}
 </style>
-
 </head>
 <body>
 
 <!-- ══ SCREEN: AUTH ══ -->
-
 <div class="screen active" id="screen-auth">
   <div class="auth-glow"></div>
   <div class="auth-box">
@@ -335,7 +332,6 @@ z-index:50;
 </div>
 
 <!-- ══ SCREEN: PAYWALL ══ -->
-
 <div class="screen" id="screen-paywall">
   <div class="paywall-glow"></div>
   <div style="padding:24px;width:100%;max-width:420px;margin:0 auto;z-index:1;padding-bottom:40px">
@@ -369,7 +365,6 @@ z-index:50;
 </div>
 
 <!-- ══ SCREEN: APP ══ -->
-
 <div class="screen" id="screen-app">
   <!-- Nav -->
   <div class="nav">
@@ -381,7 +376,6 @@ z-index:50;
   </div>
 
   <!-- Hero -->
-
   <div class="app-hero">
     <div class="app-hero-top">
       <div>
@@ -404,131 +398,126 @@ z-index:50;
   </div>
 
   <!-- Tab panels -->
-
   <div class="tab-panel active" id="panel-analyse">
 
-```
-<!-- Analysing state -->
-<div id="analysing-state" style="display:none">
-  <div class="analysing-wrap">
-    <div class="analysing-icon">🔍</div>
-    <div class="analysing-title">Analysing your form</div>
-    <div class="analysing-sub">Your AI PT is reviewing your technique across 5 movement categories</div>
-    <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
-    <div class="analysing-steps" id="a-steps">
-      <div class="a-step" id="step1">Joint detection</div>
-      <div class="a-step" id="step2">Movement mapping</div>
-      <div class="a-step" id="step3">Angle calculation</div>
-      <div class="a-step" id="step4">Quality scoring</div>
-      <div class="a-step" id="step5">PT feedback</div>
-    </div>
-  </div>
-</div>
-
-<!-- Results state -->
-<div id="results-state" style="display:none">
-  <div class="results-wrap">
-    <div class="section-label" style="margin-bottom:16px">Analysis Complete</div>
-
-    <!-- Score ring -->
-    <div class="score-hero">
-      <div class="score-exercise" id="r-exercise">Squat</div>
-      <div class="score-ring-wrap">
-        <svg width="140" height="140" viewBox="0 0 140 140">
-          <circle cx="70" cy="70" r="58" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="10"/>
-          <circle id="r-ring" cx="70" cy="70" r="58" fill="none" stroke="#4ADE80" stroke-width="10"
-            stroke-dasharray="364.4" stroke-dashoffset="364.4" stroke-linecap="round"/>
-        </svg>
-        <div class="score-number">
-          <div class="score-num" id="r-score" style="color:#4ADE80">0</div>
-          <div class="score-denom">/ 100</div>
+    <!-- Analysing state -->
+    <div id="analysing-state" style="display:none">
+      <div class="analysing-wrap">
+        <div class="analysing-icon">🔍</div>
+        <div class="analysing-title">Analysing your form</div>
+        <div class="analysing-sub">Your AI PT is reviewing your technique across 5 movement categories</div>
+        <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+        <div class="analysing-steps" id="a-steps">
+          <div class="a-step" id="step1">Joint detection</div>
+          <div class="a-step" id="step2">Movement mapping</div>
+          <div class="a-step" id="step3">Angle calculation</div>
+          <div class="a-step" id="step4">Quality scoring</div>
+          <div class="a-step" id="step5">PT feedback</div>
         </div>
       </div>
-      <div class="score-label" id="r-label">Analysing...</div>
-      <div class="score-grade grade-good" id="r-grade">Good Form</div>
     </div>
 
-    <!-- Risk badge -->
-    <div id="r-risk-wrap" style="text-align:center;margin-bottom:14px"></div>
+    <!-- Results state -->
+    <div id="results-state" style="display:none">
+      <div class="results-wrap">
+        <div class="section-label" style="margin-bottom:16px">Analysis Complete</div>
 
-    <!-- Top cue -->
-    <div class="top-cue">
-      <div class="top-cue-label">⚡ Key Coaching Cue</div>
-      <div class="top-cue-text" id="r-cue">Loading...</div>
+        <!-- Score ring -->
+        <div class="score-hero">
+          <div class="score-exercise" id="r-exercise">Squat</div>
+          <div class="score-ring-wrap">
+            <svg width="140" height="140" viewBox="0 0 140 140">
+              <circle cx="70" cy="70" r="58" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="10"/>
+              <circle id="r-ring" cx="70" cy="70" r="58" fill="none" stroke="#4ADE80" stroke-width="10"
+                stroke-dasharray="364.4" stroke-dashoffset="364.4" stroke-linecap="round"/>
+            </svg>
+            <div class="score-number">
+              <div class="score-num" id="r-score" style="color:#4ADE80">0</div>
+              <div class="score-denom">/ 100</div>
+            </div>
+          </div>
+          <div class="score-label" id="r-label">Analysing...</div>
+          <div class="score-grade grade-good" id="r-grade">Good Form</div>
+        </div>
+
+        <!-- Risk badge -->
+        <div id="r-risk-wrap" style="text-align:center;margin-bottom:14px"></div>
+
+        <!-- Top cue -->
+        <div class="top-cue">
+          <div class="top-cue-label">⚡ Key Coaching Cue</div>
+          <div class="top-cue-text" id="r-cue">Loading...</div>
+        </div>
+
+        <!-- Bars -->
+        <div class="bars-card" id="r-bars"></div>
+
+        <!-- Feedback -->
+        <div class="section-label" style="margin:16px 0 12px">PT Feedback</div>
+        <div class="feedback-card" id="r-feedback"></div>
+
+        <!-- Next focus -->
+        <div class="next-focus">
+          <div class="next-focus-label">🎯 Next Session Focus</div>
+          <div class="next-focus-text" id="r-next">Loading...</div>
+        </div>
+
+        <button class="btn-primary" onclick="resetAnalyse()" style="margin-bottom:12px">Analyse Another Lift</button>
+        <button class="btn-secondary" onclick="switchTab2('history')">View Progress History</button>
+      </div>
     </div>
 
-    <!-- Bars -->
-    <div class="bars-card" id="r-bars"></div>
+    <!-- Upload state (default) -->
+    <div id="upload-state">
+      <div class="section-label">New Analysis</div>
 
-    <!-- Feedback -->
-    <div class="section-label" style="margin:16px 0 12px">PT Feedback</div>
-    <div class="feedback-card" id="r-feedback"></div>
+      <!-- Exercise selector -->
+      <p style="font-size:13px;color:var(--muted);margin-bottom:12px">Select exercise:</p>
+      <div class="exercise-grid" id="exercise-grid">
+        <div class="exercise-btn" onclick="selectExercise(this,'Squat')">
+          <div class="exercise-icon">🏋️</div>
+          <div class="exercise-name">Squat</div>
+        </div>
+        <div class="exercise-btn" onclick="selectExercise(this,'Deadlift')">
+          <div class="exercise-icon">⚡</div>
+          <div class="exercise-name">Deadlift</div>
+        </div>
+        <div class="exercise-btn" onclick="selectExercise(this,'Bench Press')">
+          <div class="exercise-icon">💪</div>
+          <div class="exercise-name">Bench Press</div>
+        </div>
+        <div class="exercise-btn" onclick="selectExercise(this,'Overhead Press')">
+          <div class="exercise-icon">🔥</div>
+          <div class="exercise-name">OHP</div>
+        </div>
+      </div>
 
-    <!-- Next focus -->
-    <div class="next-focus">
-      <div class="next-focus-label">🎯 Next Session Focus</div>
-      <div class="next-focus-text" id="r-next">Loading...</div>
+      <!-- Upload zone -->
+      <div class="upload-zone" id="upload-zone" ondragover="handleDrag(event,true)" ondragleave="handleDrag(event,false)" ondrop="handleDrop(event)">
+        <input type="file" accept="video/*" id="file-input" onchange="handleFile(event)"/>
+        <div class="upload-icon">📹</div>
+        <div class="upload-title">Upload your lift video</div>
+        <div class="upload-sub">Film from the side · Full body visible · 3-5 reps ideal</div>
+        <div class="upload-badge">MP4 · MOV · AVI</div>
+      </div>
+
+      <!-- File preview (hidden until file selected) -->
+      <div class="file-preview" id="file-preview" style="display:none">
+        <div class="file-icon">🎬</div>
+        <div class="file-info">
+          <div class="file-name" id="file-name">video.mp4</div>
+          <div class="file-size" id="file-size">0 MB</div>
+        </div>
+        <button class="file-remove" onclick="removeFile()">✕</button>
+      </div>
+
+      <div class="alert error" id="analyse-error"></div>
+      <button class="btn-primary" id="analyse-btn" onclick="startAnalysis()" disabled>Analyse My Form →</button>
+      <p style="font-size:11px;color:var(--muted2);text-align:center;margin-top:10px;line-height:1.6">Your video is processed securely and never stored</p>
     </div>
-
-    <button class="btn-primary" onclick="resetAnalyse()" style="margin-bottom:12px">Analyse Another Lift</button>
-    <button class="btn-secondary" onclick="switchTab2('history')">View Progress History</button>
-  </div>
-</div>
-
-<!-- Upload state (default) -->
-<div id="upload-state">
-  <div class="section-label">New Analysis</div>
-
-  <!-- Exercise selector -->
-  <p style="font-size:13px;color:var(--muted);margin-bottom:12px">Select exercise:</p>
-  <div class="exercise-grid" id="exercise-grid">
-    <div class="exercise-btn" onclick="selectExercise(this,'Squat')">
-      <div class="exercise-icon">🏋️</div>
-      <div class="exercise-name">Squat</div>
-    </div>
-    <div class="exercise-btn" onclick="selectExercise(this,'Deadlift')">
-      <div class="exercise-icon">⚡</div>
-      <div class="exercise-name">Deadlift</div>
-    </div>
-    <div class="exercise-btn" onclick="selectExercise(this,'Bench Press')">
-      <div class="exercise-icon">💪</div>
-      <div class="exercise-name">Bench Press</div>
-    </div>
-    <div class="exercise-btn" onclick="selectExercise(this,'Overhead Press')">
-      <div class="exercise-icon">🔥</div>
-      <div class="exercise-name">OHP</div>
-    </div>
-  </div>
-
-  <!-- Upload zone -->
-  <div class="upload-zone" id="upload-zone" ondragover="handleDrag(event,true)" ondragleave="handleDrag(event,false)" ondrop="handleDrop(event)">
-    <input type="file" accept="video/*" id="file-input" onchange="handleFile(event)"/>
-    <div class="upload-icon">📹</div>
-    <div class="upload-title">Upload your lift video</div>
-    <div class="upload-sub">Film from the side · Full body visible · 3-5 reps ideal</div>
-    <div class="upload-badge">MP4 · MOV · AVI</div>
-  </div>
-
-  <!-- File preview (hidden until file selected) -->
-  <div class="file-preview" id="file-preview" style="display:none">
-    <div class="file-icon">🎬</div>
-    <div class="file-info">
-      <div class="file-name" id="file-name">video.mp4</div>
-      <div class="file-size" id="file-size">0 MB</div>
-    </div>
-    <button class="file-remove" onclick="removeFile()">✕</button>
-  </div>
-
-  <div class="alert error" id="analyse-error"></div>
-  <button class="btn-primary" id="analyse-btn" onclick="startAnalysis()" disabled>Analyse My Form →</button>
-  <p style="font-size:11px;color:var(--muted2);text-align:center;margin-top:10px;line-height:1.6">Your video is processed securely and never stored</p>
-</div>
-```
-
   </div>
 
   <!-- HISTORY TAB -->
-
   <div class="tab-panel" id="panel-history">
     <div class="section-label">Your Progress</div>
     <div id="history-list">
@@ -541,7 +530,6 @@ z-index:50;
   </div>
 
   <!-- PROFILE TAB -->
-
   <div class="tab-panel" id="panel-profile">
     <div class="section-label">Your Account</div>
     <div class="card" style="margin-bottom:14px">
@@ -577,7 +565,6 @@ z-index:50;
   </div>
 
   <!-- Tab bar -->
-
   <div class="tab-bar">
     <button class="tab-btn active" id="tab-analyse" onclick="switchTab2('analyse')">
       <span class="tab-icon">📹</span>
@@ -803,15 +790,7 @@ async function startAnalysis() {
   }, 400);
 
   try {
-    // Read file as base64
-    const base64 = await new Promise((res, rej) => {
-      const reader = new FileReader();
-      reader.onload = () => res(reader.result.split(',')[1]);
-      reader.onerror = () => rej(new Error('Read failed'));
-      reader.readAsDataURL(selectedFile);
-    });
-
-    // Call Claude API
+    // Call Gemini API - text based analysis
     const GEMINI_KEY = 'AIzaSyDpuE54gFP7HnIq5mhQPWizaJLKkWXy-wI';
     const prompt = `You are an expert personal trainer and movement specialist with 10+ years coaching the ${selectedExercise}. A user has uploaded a video of their ${selectedExercise} for form analysis. Since you cannot play the video directly, provide a highly realistic, detailed expert PT analysis as if you watched it carefully. Make it specific, actionable and genuinely useful — vary the scores realistically. Each analysis should feel unique and different.
 
@@ -842,7 +821,7 @@ Respond ONLY with valid JSON, no markdown, no backticks, no extra text:
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         contents: [{ parts: [{ text: prompt }] }],
-        generationConfig: { temperature: 0.8, maxOutputTokens: 1000 }
+        generationConfig: { temperature: 0.9, maxOutputTokens: 1000 }
       })
     });
 
@@ -1004,6 +983,5 @@ function switchTab2(tab) {
   });
 }
 </script>
-
 </body>
 </html>
