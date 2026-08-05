@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RepCheck</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0f0f13;
+    color: #e4e4ec;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  .container { max-width: 600px; width: 100%; }
+  h1 { font-size: 24px; font-weight: 700; margin-bottom: 4px; }
+  .subtitle { color: #888; font-size: 14px; margin-bottom: 32px; }
+  .card {
+    background: #1a1a24;
+    border: 1px solid #2a2a3a;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+  label { display: block; font-size: 13px; font-weight: 600; color: #aaa; margin-bottom: 6px; }
+  select, input[type=file] {
+    width: 100%;
+    padding: 10px 12px;
+    background: #0f0f13;
+    border: 1px solid #2a2a3a;
+    border-radius: 8px;
+    color: #e4e4ec;
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+  select:focus, input[type=file]:focus { outline: none; border-color: #00e676; }
+  input[type=file]::file-selector-button {
+    background: #2a2a3a;
+    border: none;
+    border-radius: 6px;
+    color: #e4e4ec;
+    padding: 6px 14px;
+    margin-right: 12px;
+    cursor: pointer;
+    font-size: 13px;
+  }
+  button {
+    width: 100%;
+    padding: 12px;
+    background: #00e676;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity .15s;
+  }
+  button:hover { opacity: .85; }
+  button:disabled { opacity: .4; cursor: not-allowed; }
+  .loading button { pointer-events: none; opacity: .6; }
+  .error-msg { color: #ff3b5c; font-size: 14px; padding: 12px; background: #2a0000; border-radius: 8px; margin-top: 12px; display: none; }
+  .result { display: none; margin-top: 20px; text-align: center; }
+  .result.show { display: block; }
+  a { color: #00e676; font-size: 18px; font-weight: 700; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>🏋️ RepCheck</h1>
+  <div class="subtitle">Upload a lift video to test</div>
+
+  <div class="card">
+    <label for="exercise">Exercise</label>
+    <select id="exercise">
+      <option value="squat">Squat</option>
+      <option value="deadlift">Deadlift</option>
+      <option value="bench">Bench Press</option>
+      <option value="ohp">Overhead Press</option>
+      <option value="pushup">Push Up</option>
+      <option value="pullup">Pull Up</option>
+      <option value="lunge">Lunge</option>
+      <option value="rdl">Romanian Deadlift</option>
+    </select>
+
+    <label for="video">Video file</label>
+    <input type="file" id="video" accept="video/*,.mp4,.mov,.avi,.mkv,.webm">
+
+    <button id="submit-btn" onclick="analyze()">Analyse My Form →</button>
+    <div id="error" class="error-msg"></div>
+  </div>
+
+  <div id="result" class="result card">
+    <a id="r-video-link" href="#" target="_blank">▶ View annotated video</a>
+  </div>
+</div>
+
+<script>
+const btn = document.getElementById('submit-btn');
+
+function showError(msg) {
+  const el = document.getElementById('error');
+  el.textContent = msg;
+  el.style.display = 'block';
+}
+
+function hideError() {
+  document.getElementById('error').style.display = 'none';
+}
+
+async function analyze() {
+  hideError();
+  const exercise = document.getElementById('exercise').value;
+  const file = document.getElementById('video').files?.[0];
+  if (!file) { showError('Please select a video file.'); return; }
+
+  btn.disabled = true;
+  btn.textContent = 'Analysing…';
+
+  try {
+    const form = new FormData();
+    form.append('exercise', exercise);
+    form.append('video', file, file.name);
+
+    const res = await fetch('/api/analyze', { method: 'POST', body: form });
+    const data = await res.json();
+
+    if (!res.ok) {
+      showError(data.message || data.error || 'Request failed');
+      return;
+    }
+
+    const link = document.getElementById('r-video-link');
+    if (data.annotatedVideoUrl) {
+      link.href = data.annotatedVideoUrl;
+      document.getElementById('result').classList.add('show');
+    } else {
+      showError('Analysis complete but no annotated video was generated.');
+    }
+  } catch (err) {
+    showError('Connection error: ' + err.message);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Analyse My Form →';
+  }
+}
+</script>
+</body>
+</html>
